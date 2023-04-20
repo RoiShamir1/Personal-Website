@@ -4,12 +4,13 @@ import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import Particle from "../Particle";
-import pdf from "../../Images/RoiShamirResume.pdf";
+import pdf from "../../Images/Roi_Shamir_CV.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 //const resumeLink = "https://github.com/RoiShamir1/Resume/raw/main/RoiShamirResume.pdf";
-const resumeLink = "https://media.licdn.com/dms/document/C4D2DAQE8SoqLlBTtHQ/profile-treasury-document-pdf-analyzed/0/1680175513155?e=1682553600&v=beta&t=0DpVodquYIXSJQSRUeX7rGLDsbP1V7fUSyNljIvHpzc";
+const resumeLink =
+  "https://media.licdn.com/dms/document/D4D2DAQFXYIWeGmDCfA/profile-treasury-document-pdf-analyzed/0/1681981621743?e=1683158400&v=beta&t=HKaoah1Pi9ZChNWBx0SdcJKe0qaVX4ZlMXJwOfKA0-I";
 
 const ResumeNew = () => {
   const [width, setWidth] = useState(1200);
