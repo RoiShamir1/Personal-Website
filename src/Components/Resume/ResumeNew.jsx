@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 //const resumeLink = "https://github.com/RoiShamir1/Resume/raw/main/RoiShamirResume.pdf";
 const resumeLink =
-  "https://media.licdn.com/dms/document/D4D2DAQFXYIWeGmDCfA/profile-treasury-document-pdf-analyzed/0/1681981621743?e=1683158400&v=beta&t=HKaoah1Pi9ZChNWBx0SdcJKe0qaVX4ZlMXJwOfKA0-I";
+  "https://media.licdn.com/dms/document/D4D2DAQFXYIWeGmDCfA/profile-treasury-document-pdf-analyzed/0/1681981621743?e=1685577600&v=beta&t=f4ZhwX0dr732gUIth7BY2Jmtw6deknIoD0Onx8n2Qks";
 
 const ResumeNew = () => {
   const [width, setWidth] = useState(1200);
