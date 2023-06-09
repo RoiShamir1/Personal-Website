@@ -9,8 +9,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 //const resumeLink = "https://github.com/RoiShamir1/Resume/raw/main/RoiShamirResume.pdf";
-const resumeLink =
-  "https://media.licdn.com/dms/document/D4D2DAQFXYIWeGmDCfA/profile-treasury-document-pdf-analyzed/0/1681981621743?e=1685577600&v=beta&t=f4ZhwX0dr732gUIth7BY2Jmtw6deknIoD0Onx8n2Qks";
+const resumeLink = "https://www.roishamir.com/static/media/Roi_Shamir_CV.1b3f9ee4ec06efc2b9b1.pdf";
 
 const ResumeNew = () => {
   const [width, setWidth] = useState(1200);
