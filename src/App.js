@@ -1,43 +1,39 @@
-import "./App.css";
-import React, { useState, useEffect } from "react";
-import Navbar from "./Components/Navbar";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Preloader from "../src/Components/Pre";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import DevOpsBackground from "./Components/Background/DevOpsBackground";
+import NavBar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import "./style.css";
-import Resume from "./Components/Resume/ResumeNew";
 import ScrollToTop from "./Components/ScrollToTop";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
+import NotFound from "./Components/NotFound";
 
-export const App = () => {
-  const [load, upadateLoad] = useState(true);
+// The PDF viewer is heavy, so it is only downloaded when the resume page is opened.
+const Resume = lazy(() => import("./Components/Resume/Resume"));
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar></Navbar>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Projects />} />
-          {/* <Route path="*" element={<Navigate to="/" />} /> */}
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
-};
+export const App = () => (
+  <BrowserRouter>
+    <ScrollToTop />
+    <DevOpsBackground />
+    <a className="skip-link" href="#main">
+      Skip to content
+    </a>
+    <div className="app-shell">
+      <NavBar />
+      <main id="main" className="app-main" tabIndex={-1}>
+        <Suspense fallback={<div className="page-loading" />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/project" element={<Navigate to="/projects" replace />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
+  </BrowserRouter>
+);

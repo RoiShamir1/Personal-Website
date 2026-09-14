@@ -1,0 +1,54 @@
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 575.98px) {
+  .resume-actions .btn-ui {
+    flex: 1 1 auto;
+  }
+}
+
+.resume-viewer {
+  margin-top: 2rem;
+  padding: clamp(0.6rem, 2vw, 1.5rem);
+  overflow: hidden;
+}
+
+.resume-doc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resume-doc .react-pdf__Page {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 0.9);
+}
+
+.resume-skeleton {
+  width: 100%;
+  max-width: 880px;
+  aspect-ratio: 1 / 1.414;
+  border-radius: 8px;
+  background: linear-gradient(100deg, rgba(148, 179, 255, 0.05) 20%, rgba(148, 179, 255, 0.12) 40%, rgba(148, 179, 255, 0.05) 60%);
+  background-size: 200% 100%;
+  animation: resume-shimmer 1.4s linear infinite;
+}
+
+@keyframes resume-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.resume-error {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+}
