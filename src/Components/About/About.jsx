@@ -42,7 +42,7 @@ const About = () => {
   return (
     <Container className="page">
       <PageHeader kicker="about" title="About me">
-        Combat soldier turned engineer — now keeping production healthy at 365scores, with a focus on cloud, Kubernetes and
+        Combat soldier turned engineer, now keeping production healthy at 365scores, with a focus on cloud, Kubernetes and
         automation.
       </PageHeader>
 

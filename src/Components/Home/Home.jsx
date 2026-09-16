@@ -94,7 +94,7 @@ const Home = () => {
       <section className="section" aria-labelledby="what-i-do">
         <Container>
           <SectionHeading id="what-i-do" kicker="what i do" title="From commit to production">
-            I care about the whole delivery path — how code is built, tested, shipped and kept healthy once it's live.
+            I care about the whole delivery path, how code is built, tested, shipped and kept healthy once it's live.
           </SectionHeading>
           <Lifecycle stages={lifecycle} />
           <div className="focus-grid">
@@ -122,7 +122,7 @@ const Home = () => {
         <Container>
           <div className="section-head-row">
             <SectionHeading id="featured-work" kicker="featured work" title="Recent projects">
-              Pipelines, containers and AI — each card maps out how the pieces connect.
+              Pipelines, containers and AI, each card maps out how the pieces connect.
             </SectionHeading>
             <Link to="/projects" className="btn-ui btn-ui--ghost">
               All projects

@@ -55,7 +55,7 @@ export const profile = {
   roleDetail: "at 365scores",
   eyebrow: "Cloud · Kubernetes · DevOps",
   tagline:
-    "I keep production healthy at 365scores — monitoring AWS and Kubernetes infrastructure, shipping with ArgoCD and automating with Terraform and Python, backed by a full-stack development background.",
+    "I keep production healthy at 365scores, monitoring AWS and Kubernetes infrastructure, shipping with ArgoCD and automating with Terraform and Python, backed by a fullstack development background.",
 };
 
 export const socials = [
@@ -69,7 +69,7 @@ export const githubUrl = socials.find((s) => s.label === "GitHub").href;
 
 // Commands typed by the animated terminal on the home page.
 export const terminalSession = [
-  { command: "whoami", output: [{ text: "roi-shamir · noc engineer @ 365scores", tone: "accent" }] },
+  { command: "whoami", output: [{ text: "roi shamir · noc engineer @ 365scores", tone: "accent" }] },
   { command: "kubectl get pods -n production", output: [{ text: "✔ 24/24 pods Running · 0 restarts", tone: "success" }] },
   {
     command: "argocd app sync api",
@@ -91,7 +91,7 @@ export const focusAreas = [
     icon: FiActivity,
     title: "Production monitoring",
     description:
-      "Watching over live systems — spotting incidents early with dashboards, logs and uptime checks, then troubleshooting to the root cause.",
+      "Watching over live systems, spotting incidents early with dashboards, logs and uptime checks, then troubleshooting to the root cause.",
     tools: ["Grafana", "Coralogix", "CloudWatch", "Checkly"],
   },
   {
@@ -108,17 +108,17 @@ export const focusAreas = [
   },
   {
     icon: FiCode,
-    title: "Full-stack development",
-    description: "I build, too — from AWS Lambda functions wired into a C# ASP.NET backend to React and Angular front-ends.",
+    title: "Full stack development",
+    description: "I build, too, from AWS Lambda functions wired into a C# ASP.NET backend to React and Angular front ends.",
     tools: ["C# / .NET", "AWS Lambda", "Node.js", "React"],
   },
 ];
 
 export const bio = [
-  "I'm Roi, a NOC Engineer at 365scores with a full-stack development background and a B.Sc. in Computer Science (Sapir Academic College, 2023–2026). I enjoy the part of software most people never see: the infrastructure, deployments and automation that keep production running.",
-  "Day to day I monitor and troubleshoot production systems, work with AWS, Kubernetes and ArgoCD for deployment and continuous delivery, and maintain Terraform and Python automation. I also build — for example, AWS Lambda functions integrated directly with a C# ASP.NET backend to scale backend operations.",
-  "My path into tech started at Sela College's Soldiers to High-Tech program, where I trained as a full-stack developer. For my final project at Sapir, I built Argus with a teammate: a drone-based security system that detects threats in real time using YOLO and OpenCV.",
-  "Before tech, I served four years as a combat soldier in Search & Rescue and was discharged as a Staff Sergeant. It taught me to stay calm under pressure, communicate clearly and own the mission end to end — great training for production incidents.",
+  "I'm Roi, a NOC Engineer at 365scores with a full stack development background and a B.Sc. in Computer Science (Sapir Academic College, 2023–2026). I enjoy the part of software most people never see: the infrastructure, deployments and automation that keep production running.",
+  "Day to day I monitor and troubleshoot production systems, work with AWS, Kubernetes and ArgoCD for deployment and continuous delivery, and maintain Terraform and Python automation. I also build for example, AWS Lambda functions integrated directly with a C# ASP.NET backend to scale backend operations.",
+  "My path into tech started at Sela College's Soldiers to High Tech program, where I trained as a fullstack developer. For my final project at Sapir, I built Argus with a teammate: a drone-based security system that detects threats in real time using YOLO and OpenCV.",
+  "Before tech, I served four years as a combat soldier in Search & Rescue and was discharged as a Staff Sergeant. It taught me to stay calm under pressure, communicate clearly and own the mission end to end great training for production incidents.",
 ];
 
 export const quote = { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" };
@@ -212,7 +212,7 @@ export const journey = [
     title: "B.Sc. Computer Science",
     org: "Sapir Academic College",
     description:
-      "Final project: Argus, an autonomous drone-based security system with real-time threat detection. Courses included embedded computer systems, object-oriented programming in .NET, and AI & LLMs.",
+      "Final project: Argus, an autonomous drone based security system with real time threat detection. Courses included embedded computer systems, object oriented programming in .NET, and AI & LLMs.",
   },
   {
     period: "2022 — 2023",
@@ -237,12 +237,12 @@ export const projects = [
     category: "AI · Computer Vision",
     featured: true,
     summary:
-      "My B.Sc. final project at Sapir Academic College, built in a team of two: a DJI drone streams live video to an edge computer that detects weapons and suspicious behavior in real time, and every confirmed threat becomes a geo-tagged alert in the cloud.",
+      "My B.Sc. final project at Sapir Academic College, built in a team of two: a DJI drone streams live video to an edge computer that detects weapons and suspicious behavior in real time, and every confirmed threat becomes a geo tagged alert in the cloud.",
     highlights: [
       "Live RTMP video from a DJI drone processed on a local edge machine with OpenCV, with automatic stream reconnects",
       "Custom weapon-detection models (YOLOv11, RF-DETR) trained on a Roboflow dataset, merged with a person detector using IoU de-duplication",
-      "Sliding-window confirmation (4 hits in 8 frames) before raising an alert, to cut false positives",
-      "Cloud event logging to MongoDB Atlas and a real-time Streamlit dashboard for alert monitoring and incident management",
+      "Sliding window confirmation (4 hits in 8 frames) before raising an alert, to cut false positives",
+      "Cloud event logging to MongoDB Atlas and a real time Streamlit dashboard for alert monitoring and incident management",
     ],
     flow: ["DJI drone", "RTMP stream", "YOLOv11 + OpenCV", "MongoDB Atlas", "Streamlit"],
     tech: ["Python", "YOLOv11", "RF-DETR", "OpenCV", "Roboflow", "MongoDB Atlas", "Streamlit"],
@@ -258,13 +258,13 @@ export const projects = [
     category: "DevOps · CI/CD",
     featured: true,
     summary:
-      "A hands-on DevOps lab on the open-source vprofile stack: every commit runs through an automated Jenkins pipeline, and only artifacts that pass the quality gate get deployed.",
+      "A hands on DevOps lab on the open source vprofile stack: every commit runs through an automated Jenkins pipeline, and only artifacts that pass the quality gate get deployed.",
     highlights: [
       "Declarative Jenkinsfile: Maven build, unit and integration tests, Checkstyle analysis",
       "SonarQube scan with a quality gate that aborts the pipeline on failure",
       "Build-numbered artifacts published to a Nexus repository",
       "Ansible playbooks set up Tomcat, back up the running release and deploy the new WAR",
-      "Multi-VM environment (MySQL, Memcached, RabbitMQ, Tomcat, Nginx) provisioned with Vagrant",
+      "Multi VM environment (MySQL, Memcached, RabbitMQ, Tomcat, Nginx) provisioned with Vagrant",
     ],
     flow: ["git push", "Jenkins", "Build & test", "SonarQube gate", "Nexus", "Ansible → Tomcat"],
     tech: ["Jenkins", "Maven", "SonarQube", "Nexus", "Ansible", "Vagrant"],
@@ -282,7 +282,7 @@ export const projects = [
       "Python producer publishes JSON metric events to a Kafka topic (with ZooKeeper)",
       "Consumer service persists every event to MongoDB",
       "Sync worker caches new events in Redis, tracking a timestamp watermark so nothing is processed twice",
-      "Per-service Dockerfiles with shared configuration mounted into each container",
+      "Per service Dockerfiles with shared configuration mounted into each container",
     ],
     flow: ["Producer", "Kafka", "Consumer", "MongoDB", "Redis"],
     tech: ["Docker Compose", "Kafka", "ZooKeeper", "MongoDB", "Redis", "Python"],
@@ -310,7 +310,7 @@ export const projects = [
     year: "2023",
     category: "Full-Stack · MERN",
     summary:
-      "A streaming platform with a Node.js/Express API for movies and series and a React client with sign-up, browsing, search and video playback.",
+      "A streaming platform with a Node.js/Express API for movies and series and a React client with sign up, browsing, search and video playback.",
     highlights: [
       "REST API with Express, Mongoose and MongoDB",
       "JWT authentication with bcrypt-hashed passwords",
