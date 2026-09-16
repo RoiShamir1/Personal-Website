@@ -1,4 +1,4 @@
-# Roi Shamir — Personal Website
+# Roi Shamir - Personal Website
 
 My portfolio: DevOps, CI/CD and full-stack projects.
 Live at [personal-website-jade-eight.vercel.app](https://personal-website-jade-eight.vercel.app).
